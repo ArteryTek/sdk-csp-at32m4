@@ -1,0 +1,686 @@
+---
+vendor: ArteryTek
+dvendor: ArteryTek
+name: AT32M4
+version: 0.0.1
+yaml_version: 1
+type: Chip_Support_Packages
+family_name: AT32
+series:
+  description: |-
+    AT32M4 is a new 32-bit high performance, low power consumption universal microcontroller family powered by the ARM Cortex-M4 RISC core,which targeted at various MCU application areas.
+    The family integrates features to simplify system design and provide customers wide range of comprehensive and superior cost effective MCU portfolios with proven technology and great innovation.
+
+      - 5 V-tolerant I/Os
+      - Timer with quadrature (incremental) encoder input
+      - 96-bit unique ID
+  series_name: AT32M4
+  cpu_info:
+    core: Cortex-M4
+    endian: Little-endian
+  peripheral: {}
+  sub_series:
+  - sub_series_name: AT32M412
+    cpu_info:
+      fpu: '1'
+      mpu: '1'
+      max_clock: '180000000'
+    source_files:
+      file:
+      - libraries\m412_416\drivers\src
+      - libraries\m412_416\drivers\inc
+      - libraries\m412_416\cmsis\cm4\core_support
+      - libraries\m412_416\cmsis\cm4\device_support\at32m412_416_conf.h
+      - libraries\m412_416\cmsis\cm4\device_support\system_at32m412_416.h
+      - libraries\m412_416\cmsis\cm4\device_support\system_at32m412_416.c
+      - libraries\m412_416\cmsis\cm4\device_support\system_at32m412_416.h
+    chips:
+    - chip_name: AT32M412CBT7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412CB\link.lds
+          marco:
+          - AT32M412CBT7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412C8T7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412C8\link.lds
+          marco:
+          - AT32M412C8T7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412KBT7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412KB\link.lds
+          marco:
+          - AT32M412KBT7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412K8T7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412K8\link.lds
+          marco:
+          - AT32M412K8T7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412KBT7-4
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412KB\link.lds
+          marco:
+          - AT32M412KBT7_4
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412K8T7-4
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412K8\link.lds
+          marco:
+          - AT32M412K8T7_4
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412EBP7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412EB\link.lds
+          marco:
+          - AT32M412EBP7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M412E8P7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M412E8\link.lds
+          marco:
+          - AT32M412E8P7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    ui:
+      uart:
+        default_value: UART1
+        prompt_message_en: select one uart as console output interface
+        prompt_message_zh: 选择一个串口作为控制台信息输出接口
+      tx_pin:
+        default_value: PA9
+        prompt_message_en: 'set the tx pin name of the console device interface, the
+          value should be with a format"P+[port name][pin number]",eg. PA2,PB6 '
+        prompt_message_zh: 设置控制台设备的数据发送引脚的名称, 名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2,
+          PB6
+      rx_pin:
+        default_value: PA10
+        prompt_message_en: 'set the rx pin name of the console device interface, the
+          value should be with a format"P+[port name][pin number]", eg. PA3, PB7 '
+        prompt_message_zh: 设置控制台设备的数据发送引脚的名称，名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
+    docs:
+    - file: documents\RM_AT32M412_416_CH_V2.00.pdf
+      title: AT32M412_416 Reference Manual
+    svd:
+      file: debug\svd\AT32M412xx_v2.svd
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco:
+        - SOC_FAMILY_AT32
+        - SOC_SERIES_AT32M412
+        - USE_STDPERIPH_DRIVER
+        source_files:
+        - drivers\baremetal\m412_416
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco:
+        - SOC_FAMILY_AT32
+        - SOC_SERIES_AT32M412
+        - USE_STDPERIPH_DRIVER
+        source_files:
+        - drivers\nano\m412_416
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco:
+        - SOC_FAMILY_AT32
+        - SOC_SERIES_AT32M412
+        - USE_STDPERIPH_DRIVER
+        source_files:
+        - drivers\rtt\m412_416
+        - drivers\rtt\common
+  - sub_series_name: AT32M416
+    cpu_info:
+      fpu: '1'
+      mpu: '1'
+      max_clock: '180000000'
+    source_files:
+      file:
+      - libraries\m412_416\drivers\src
+      - libraries\m412_416\drivers\inc
+      - libraries\m412_416\cmsis\cm4\core_support
+      - libraries\m412_416\cmsis\cm4\device_support\at32m412_416_conf.h
+      - libraries\m412_416\cmsis\cm4\device_support\system_at32m412_416.h
+      - libraries\m412_416\cmsis\cm4\device_support\system_at32m412_416.c
+      - libraries\m412_416\cmsis\cm4\device_support\system_at32m412_416.h
+    chips:
+    - chip_name: AT32M416CBT7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416CB\link.lds
+          marco:
+          - AT32M416CBT7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416C8T7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416C8\link.lds
+          marco:
+          - AT32M416C8T7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416KBT7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416KB\link.lds
+          marco:
+          - AT32M416KBT7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416K8T7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416K8\link.lds
+          marco:
+          - AT32M416K8T7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416KBT7-4
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416KB\link.lds
+          marco:
+          - AT32M416KBT7_4
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416K8T7-4
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416K8\link.lds
+          marco:
+          - AT32M416K8T7_4
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416EBP7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00020000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416EB\link.lds
+          marco:
+          - AT32M416EBP7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    - chip_name: AT32M416E8P7
+      peripheral: {}
+      memory:
+      - id: IROM1
+        start: '0x08000000'
+        size: '0x00010000'
+        default: '1'
+      - id: IRAM1
+        start: '0x20000000'
+        size: '0x00004000'
+        init: '0'
+        default: '1'
+      compiler:
+        gcc:
+          entry_point: entry
+          link_script: linkscripts\AT32M416E8\link.lds
+          marco:
+          - AT32M416E8P7
+          files:
+          - libraries\m412_416\cmsis\cm4\device_support\startup\gcc\startup_at32m412_416.s
+          - libraries\m412_416\cmsis\cm4\device_support\at32m412_416.h
+          - libraries\cmsis\lib\gcc
+        armcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+        iarcc:
+          entry_point: none
+          link_script: none
+          marco: []
+          files: []
+    ui:
+      uart:
+        default_value: UART1
+        prompt_message_en: select one uart as console output interface
+        prompt_message_zh: 选择一个串口作为控制台信息输出接口
+      tx_pin:
+        default_value: PA9
+        prompt_message_en: 'set the tx pin name of the console device interface, the
+          value should be with a format"P+[port name][pin number]",eg. PA2,PB6 '
+        prompt_message_zh: 设置控制台设备的数据发送引脚的名称, 名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2,
+          PB6
+      rx_pin:
+        default_value: PA10
+        prompt_message_en: 'set the rx pin name of the console device interface, the
+          value should be with a format"P+[port name][pin number]", eg. PA3, PB7 '
+        prompt_message_zh: 设置控制台设备的数据发送引脚的名称，名称应该具有以下格式“P+[端口名称][端口编号]”, 比如：PA2, PB6
+    docs:
+    - file: documents\RM_AT32M412_416_CH_V2.00.pdf
+      title: AT32M412_416 Reference Manual
+    svd:
+      file: debug\svd\AT32M416xx_v2.svd
+    project_type:
+      bare_metal:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          sysTick: none
+        marco:
+        - SOC_FAMILY_AT32
+        - SOC_SERIES_AT32M416
+        - USE_STDPERIPH_DRIVER
+        source_files:
+        - drivers\baremetal\m412_416
+      rtt_nano:
+        function_map:
+          clk_init: none
+          uart_init: none
+          putc: none
+          getc: none
+          sysTick: none
+          heap_init: none
+        marco:
+        - SOC_FAMILY_AT32
+        - SOC_SERIES_AT32M416
+        - USE_STDPERIPH_DRIVER
+        source_files:
+        - drivers\nano\m412_416
+      rtt:
+        function_map:
+          rt_hw_board_init;: none
+          rt_hw_serial_register: none
+          rt_hw_pin_register: none
+          heap_init: none
+        marco:
+        - SOC_FAMILY_AT32
+        - SOC_SERIES_AT32M416
+        - USE_STDPERIPH_DRIVER
+        source_files:
+        - drivers\rtt\m412_416
+        - drivers\rtt\common
